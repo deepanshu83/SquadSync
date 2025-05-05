@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="chatBox"></div>
+<input id="chatInput" placeholder="Message..." />
+<button onclick="sendMessage()">Send</button>
+
+</body>
+<script>
+    async function sendMessage() {
+  const msg = document.getElementById("chatInput").value;
+  await fetch("http://localhost:5000/api/chat", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${localStorage.getItem("token")}`
+    },
+    body: JSON.stringify({ message: msg })
+  });
+  document.getElementById("chatInput").value = "";
+  loadMessages();
+}
+
+async function loadMessages() {
+  const res = await fetch("http://localhost:5000/api/chat");
+  const messages = await res.json();
+  document.getElementById("chatBox").innerHTML = messages.map(m => `<p>${m.user}: ${m.text}</p>`).join('');
+}
+
+setInterval(loadMessages, 3000); // Refresh every 3 seconds
+
+</script>
+</html>

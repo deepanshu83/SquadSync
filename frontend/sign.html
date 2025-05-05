@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - SquadSync</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(145deg, #e0f0ff, #ffffff);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .signup-container {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 119, 255, 0.1);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .signup-container:hover {
+            transform: translateY(-5px);
+        }
+
+        .logo {
+            width: 120px;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            color: #0077ff;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #0077ff;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0, 119, 255, 0.1);
+        }
+
+        .signup-button {
+            background: #0077ff;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .signup-button:hover {
+            background: #005fcc;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 119, 255, 0.2);
+        }
+
+        .login-link {
+            margin-top: 2rem;
+            color: #666;
+        }
+
+        .login-link a {
+            color: #0077ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .error-message {
+            color: #ff3333;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            display: none;
+        }
+
+        .input-group.error input {
+            border-color: #ff3333;
+        }
+
+        .input-group.error .error-message {
+            display: block;
+        }
+
+        .password-requirements {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+            text-align: left;
+        }
+
+        .requirement {
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .requirement.met {
+            color: #00aa55;
+        }
+
+        .requirement::before {
+            content: '•';
+            color: currentColor;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container" data-aos="fade-up">
+        <img src="logo.png" alt="SquadSync Logo" class="logo">
+        <h1>Create Account</h1>
+        <form id="signup-form">
+            <div class="input-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required>
+                <div class="error-message">Please enter your full name</div>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error-message">Please enter a valid email address</div>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <div class="error-message">Please enter a valid password</div>
+                <div class="password-requirements">
+                    <div class="requirement">At least 8 characters</div>
+                    <div class="requirement">One uppercase letter</div>
+                    <div class="requirement">One number</div>
+                    <div class="requirement">One special character</div>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                <div class="error-message">Passwords do not match</div>
+            </div>
+            <button type="submit" class="signup-button">Create Account</button>
+        </form>
+        <div class="login-link">
+            Already have an account? <a href="login.html">Log in</a>
+        </div>
+    </div>
+</body>
+</html>
