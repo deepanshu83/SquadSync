@@ -3,178 +3,124 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RoomMates Connect - SquadSync</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>Roommates Connect | CampusMate</title>
   <style>
-    * {
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #eef1f5;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #fff7f0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    .header {
-      background-color: #ff6b6b;
+    header {
+      background: #6c63ff;
       color: white;
-      padding: 30px 20px;
+      padding: 20px;
       text-align: center;
     }
 
-    .header h1 {
-      margin-bottom: 10px;
-    }
-
-    main {
-      flex: 1;
-      padding: 30px 20px;
-    }
-
-    .form-container {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      max-width: 600px;
-      margin: 0 auto 30px;
-    }
-
-    .form-container h2 {
-      margin-bottom: 20px;
-      color: #222;
-    }
-
-    form {
+    .filters {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
     }
 
-    label {
-      margin: 10px 0 5px;
-      font-weight: 600;
-    }
-
-    input, select, textarea {
+    .filters select, .filters input {
       padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
       border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 1rem;
     }
 
-    textarea {
-      resize: vertical;
-      min-height: 80px;
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
     }
 
-    button {
-      margin-top: 20px;
-      padding: 12px;
-      background-color: #ff6b6b;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    button:hover {
-      background-color: #e25a5a;
-    }
-
-    .posts {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .post {
+    .card {
       background: white;
       padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    .post h3 {
-      margin-bottom: 5px;
+    .card h3 {
+      margin: 0 0 10px;
+    }
+
+    .card p {
+      margin: 5px 0;
       color: #333;
     }
 
-    .post p {
-      color: #555;
-      font-size: 0.95rem;
+    .card button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: #6c63ff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
     }
 
-    footer {
-      background-color: #ffe9e1;
-      text-align: center;
-      padding: 15px;
-      color: #555;
-      font-size: 0.9rem;
+    .card button:hover {
+      background: #554ed6;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="header">
-      <h1>🔎 RoomMates Connect</h1>
-      <p>"Find your perfect room buddy, stress-free!"</p>
-    </div>
+    <h1>🏠 Roommates Connect</h1>
+    <p>Find compatible roommates across campus!</p>
   </header>
 
-  <main>
-    <div class="form-container">
-      <h2>Post Your Roommate Requirement</h2>
-      <form>
-        <label for="name">Your Name</label>
-        <input type="text" id="name" placeholder="Full name" required />
+  <div class="filters">
+    <select>
+      <option value="">Select Branch</option>
+      <option>CSE</option>
+      <option>ECE</option>
+      <option>ME</option>
+    </select>
 
-        <label for="gender">Preferred Roommate Gender</label>
-        <select id="gender" required>
-          <option value="">Select</option>
-          <option>Male</option>
-          <option>Female</option>
-          <option>Any</option>
-        </select>
+    <select>
+      <option value="">Select Year</option>
+      <option>1st Year</option>
+      <option>2nd Year</option>
+      <option>3rd Year</option>
+    </select>
 
-        <label for="room">Room Type</label>
-        <select id="room" required>
-          <option value="">Select</option>
-          <option>2-Seater</option>
-          <option>3-Seater</option>
-          <option>Independent</option>
-        </select>
+    <select>
+      <option value="">Select Gender</option>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
 
-        <label for="desc">Additional Notes</label>
-        <textarea id="desc" placeholder="Timings, habits, requirements etc."></textarea>
+    <input type="text" placeholder="Search by hobby, name..." />
+  </div>
 
-        <button type="submit">Submit Listing</button>
-      </form>
+  <div class="cards-container">
+    <div class="card">
+      <h3>Rohan Sharma (2nd Yr CSE)</h3>
+      <p><strong>Bio:</strong> Loves coding & night walks.</p>
+      <p><strong>Looking for:</strong> Quiet roommate, non-smoker</p>
+      <p><strong>Hobbies:</strong> Guitar, DSA, Anime</p>
+      <button>📩 Connect</button>
     </div>
 
-    <div class="posts">
-      <div class="post">
-        <h3>👤 Looking for a 2-seater roommate (Female)</h3>
-        <p>Hey! I'm in Hostel C and need a chill, tidy roommate. Prefer early risers! 😊</p>
-      </div>
-      <div class="post">
-        <h3>👤 Male roommate needed for 3-seater (Hostel B)</h3>
-        <p>2nd-year Mech student. Clean & non-smoker. DM me if interested. – Kunal</p>
-      </div>
+    <div class="card">
+      <h3>Neha Patel (1st Yr ECE)</h3>
+      <p><strong>Bio:</strong> Early riser, organized lifestyle.</p>
+      <p><strong>Looking for:</strong> Clean & calm roommate</p>
+      <p><strong>Hobbies:</strong> Sketching, Reading</p>
+      <button>📩 Connect</button>
     </div>
-  </main>
-
-  <footer>
-    SquadSync | RoomMates Connect — Find a friend to share your space 👬
-  </footer>
+  </div>
 
 </body>
 </html>
