@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resource Library | CampusMate</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #0077ff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px;
+    }
+
+    .filters select, .filters input {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .card button {
+      background: #4a90e2;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin: 5px 5px 0 0;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .card button:hover {
+      background: #3e7bd1;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📚 Resource Library</h1>
+    <p>Find PYQs, notes, and more – sorted and simple!</p>
+  </header>
+
+  <div class="filters">
+    <select id="branch">
+      <option value="">Select Branch</option>
+      <option value="cse">CSE</option>
+      <option value="ece">ECE</option>
+      <option value="me">ME</option>
+    </select>
+
+    <select id="year">
+      <option value="">Select Year</option>
+      <option value="1st">1st Year</option>
+      <option value="2nd">2nd Year</option>
+      <option value="3rd">3rd Year</option>
+    </select>
+
+    <select id="subject">
+      <option value="">Select Subject</option>
+      <option value="pps">PPS</option>
+      <option value="maths">Maths</option>
+      <option value="bee">BEEE</option>
+    </select>
+
+    <input type="text" id="search" placeholder="Search Subject or Topic"/>
+  </div>
+
+  <div class="cards-container" id="resources">
+    <!-- Example card -->
+    <div class="card">
+      <h3>PPS - Past Year Papers</h3>
+      <p>Includes last 3 years' question papers.</p>
+      <button onclick="window.open('https://drive.google.com', '_blank')">📄 View PDF</button>
+      <button>⬇️ Download</button>
+    </div>
+
+    <div class="card">
+      <h3>Maths Notes</h3>
+      <p>Chapter-wise handwritten notes.</p>
+      <button onclick="window.open('https://drive.google.com', '_blank')">📄 View Notes</button>
+      <button>⬇️ Download</button>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roommates Connect | CampusMate</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #eef1f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #6c63ff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .filters select, .filters input {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+    }
+
+    .card p {
+      margin: 5px 0;
+      color: #333;
+    }
+
+    .card button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: #6c63ff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .card button:hover {
+      background: #554ed6;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🏠 Roommates Connect</h1>
+    <p>Find compatible roommates across campus!</p>
+  </header>
+
+  <div class="filters">
+    <select>
+      <option value="">Select Branch</option>
+      <option>CSE</option>
+      <option>ECE</option>
+      <option>ME</option>
+    </select>
+
+    <select>
+      <option value="">Select Year</option>
+      <option>1st Year</option>
+      <option>2nd Year</option>
+      <option>3rd Year</option>
+    </select>
+
+    <select>
+      <option value="">Select Gender</option>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
+
+    <input type="text" placeholder="Search by hobby, name..." />
+  </div>
+
+  <div class="cards-container">
+    <div class="card">
+      <h3>Rohan Sharma (2nd Yr CSE)</h3>
+      <p><strong>Bio:</strong> Loves coding & night walks.</p>
+      <p><strong>Looking for:</strong> Quiet roommate, non-smoker</p>
+      <p><strong>Hobbies:</strong> Guitar, DSA, Anime</p>
+      <button>📩 Connect</button>
+    </div>
+
+    <div class="card">
+      <h3>Neha Patel (1st Yr ECE)</h3>
+      <p><strong>Bio:</strong> Early riser, organized lifestyle.</p>
+      <p><strong>Looking for:</strong> Clean & calm roommate</p>
+      <p><strong>Hobbies:</strong> Sketching, Reading</p>
+      <button>📩 Connect</button>
+    </div>
+  </div>
+
+</body>
+</html>
