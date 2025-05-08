@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SquadSync - Student Life Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #4f46e5, #6366f1);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+    .header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+    }
+    .header p {
+      margin-top: 8px;
+      font-size: 1.1rem;
+      color: #dcdcff;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 40px;
+      padding: 0 20px;
+      width: 100%;
+      max-width: 600px;
+    }
+    .button {
+      background-color: white;
+      color: #4f46e5;
+      border: none;
+      border-radius: 20px;
+      padding: 30px 20px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s;
+      text-align: center;
+    }
+    .button:hover {
+      transform: scale(1.05);
+      background-color: #e0e0ff;
+    }
+    footer {
+      margin-top: auto;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: white;
+      color: #333;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 90%;
+      width: 400px;
+      text-align: center;
+      position: relative;
+    }
+    .close {
+      position: absolute;
+      top: 10px; right: 15px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>🚀 SquadSync</h1>
+    <p>Your Student Life Companion</p>
+  </div>
+
+  <div class="grid">
+    <a href="">
+      <button class="button" >🔎 RoomMates Connect</button>
+    </a>
+    <a href="">
+      <button class="button" >🔧 FixItNow</button>
+    </a>
+    <a href="">
+      <button class="button" >📚 Resource Library</button>
+    </a>
+    <a href="">
+      <button class="button" >🔎 Lost & Found</button>
+    </a>
+  </div>
+
+
+  <footer>
+    Made with 💙 by students @ BKBIET
+  </footer>
+
+</body>
+</html>

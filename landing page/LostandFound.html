@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lost & Found - SquadSync</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f6ff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .header {
+      background-color: #1d4ed8;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin-bottom: 10px;
+    }
+
+    main {
+      flex: 1;
+      padding: 30px 20px;
+    }
+
+    .form-container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .form-container h2 {
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin: 10px 0 5px;
+      font-weight: 600;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #1d4ed8;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #173fc2;
+    }
+
+    .posts {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .post {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+    }
+
+    .post h3 {
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .post p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background-color: #e2e8f0;
+      text-align: center;
+      padding: 15px;
+      color: #555;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header">
+      <h1>🔎 Lost & Found</h1>
+      <p>"Helping students reconnect with their stuff."</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="form-container">
+      <h2>Report Lost/Found Item</h2>
+      <form>
+        <label for="type">Type</label>
+        <select id="type" required>
+          <option value="">Select</option>
+          <option value="Lost">Lost</option>
+          <option value="Found">Found</option>
+        </select>
+
+        <label for="item">Item Name</label>
+        <input type="text" id="item" placeholder="E.g., Black Wallet, Red Umbrella" required />
+
+        <label for="location">Last Seen / Found At</label>
+        <input type="text" id="location" placeholder="Library, Hostel A stairs, etc." required />
+
+        <label for="desc">Description</label>
+        <textarea id="desc" placeholder="Add description like color, brand, unique marks..." required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="posts">
+      <div class="post">
+        <h3>📌 Lost: Black Puma Jacket</h3>
+        <p>Last seen in Hostel D common room. Please DM if found. — Riya (CSE-2nd Yr)</p>
+      </div>
+      <div class="post">
+        <h3>📌 Found: Water Bottle (Blue)</h3>
+        <p>Found near mess entry gate. Brand: Milton. — Abhinav</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    SquadSync | Lost & Found — Reuniting students with their belongings 🔍
+  </footer>
+
+</body>
+</html>
