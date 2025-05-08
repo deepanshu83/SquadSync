@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+     background-color:#0077ff ;
+     color: aliceblue;
+     font-weight: bold;
+     padding: 30px;
+     text-align: center;
+}
+
+.header h1{
+    margin: 10px;
+}
